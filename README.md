@@ -78,6 +78,38 @@ echo $company->isActive();
 
 sau 
 
+echo $company->name;
+echo $company->cif;
+echo $company->reg_com;
+echo $company->phone;
+echo $company->full_address;
+echo $company->city;
+echo $company->county;
+echo $company->street;
+echo $company->street_number;
+echo $company->postal_code;
+echo $company->others;
+
+echo $company->has_tva;
+echo $company->tva_enroll_date;
+echo $company->tva_end_date;
+
+echo $company->has_tva_collection;
+echo $company->tva_collection_enroll_date;
+echo $company->tva_collection_end_date;
+
+echo $company->has_tva_split;
+echo $company->tva_split_enroll_date;
+echo $company->tva_split_end_date;
+echo $company->tva_split_iban;
+
+echo $company->reactivation_date;
+echo $company->inactivation_date;
+echo $company->deletion_date;
+echo $company->is_active;
+
+sau 
+
 $anaf->toArray(); // Returneaza un array cu toate datele
 $anaf->toJson(); // Returneaza un string JSON cu toate datele
 ```
