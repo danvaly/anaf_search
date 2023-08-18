@@ -3,6 +3,7 @@
 namespace Danvaly\AnafSearch;
 
 use Danvaly\AnafSearch\Models\Company;
+use Illuminate\Support\Collection;
 
 /**
  * Implementare API ANAF V6
@@ -13,18 +14,18 @@ use Danvaly\AnafSearch\Models\Company;
 class Anaf
 {
     /** @var array CIFs List */
-    protected $cifs = [];
+    protected array $cifs = [];
 
 
     /**
      * Add one or more cifs
      *
-     * @param string|array $cifs
+     * @param array|string $cifs
      * @param string|null  $date
      *
      * @return $this
      */
-    public function addCif($cifs, string $date = null): Client
+    public function addCif(array|string $cifs, string $date = null): Anaf
     {
         // If not have set date return today
         if (is_null($date)) {
@@ -51,12 +52,12 @@ class Anaf
     }
 
     /**
-     * @return \Illuminate\Support\Collection
+     * @return Collection
      * @throws Exceptions\LimitExceeded
      * @throws Exceptions\RequestFailed
      * @throws Exceptions\ResponseFailed
      */
-    public function get(): \Illuminate\Support\Collection
+    public function get(): Collection
     {
         $companies = [];
         $results = Http::call($this->cifs);
@@ -79,12 +80,12 @@ class Anaf
     }
 
     /**
-     * @return \Illuminate\Support\Collection
+     * @return Collection
      * @throws Exceptions\LimitExceeded
      * @throws Exceptions\RequestFailed
      * @throws Exceptions\ResponseFailed
      */
-    public static function search($cifs, string $date = null)
+    public static function search($cifs, string $date = null): Collection
     {
         $anaf = new self;
         $anaf->addCif($cifs, $date);

@@ -41,12 +41,5 @@
         "psr-4": {
             "Danvaly\\AnafSearch\\": "tests/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "aliases": {
-                "Anaf": "Danvaly\\AnafSearch\\Facade"
-            }
-        }
     }
 }
