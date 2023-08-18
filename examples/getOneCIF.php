@@ -2,7 +2,7 @@
 require_once(__DIR__ . "/../vendor/autoload.php");
 
 // Get data about more CIF
-$anaf = new \Itrack\Anaf\Client();
+$anaf = new \Danvaly\AnafSearch\Anaf();
 $anaf->addCif("14080700");
 $company = $anaf->first();
 

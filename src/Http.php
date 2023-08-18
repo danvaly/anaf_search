@@ -1,5 +1,5 @@
 <?php
-namespace Itrack\Anaf;
+namespace Danvaly\AnafSearch;
 
 class Http
 {

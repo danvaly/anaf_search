@@ -1,8 +1,8 @@
 <?php
 
-namespace Itrack\Anaf\Models;
+namespace Danvaly\AnafSearch\Models;
 
-use Itrack\Anaf\Parser;
+use Danvaly\AnafSearch\Parser;
 use PHPUnit\Framework\TestCase;
 
 class CompanyTest extends TestCase

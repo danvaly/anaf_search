@@ -1,4 +1,4 @@
 <?php
-namespace Itrack\Anaf\Exceptions;
+namespace Danvaly\AnafSearch\Exceptions;
 
 class ResponseFailed extends \Exception {}

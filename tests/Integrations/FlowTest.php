@@ -1,6 +1,6 @@
 <?php
 
-namespace Itrack\Anaf;
+namespace Danvaly\AnafSearch;
 
 use PHPUnit\Framework\TestCase;
 
@@ -8,7 +8,7 @@ class FlowTest extends TestCase
 {
     public function testMultipleCUI()
     {
-        $anaf = new Client();
+        $anaf = new Anaf();
         $anaf->addCif("RO16826034");
         $anaf->addCif("RO14399840");
         $results = $anaf->get();
@@ -18,7 +18,7 @@ class FlowTest extends TestCase
 
     public function testCUIList()
     {
-        $anaf = new Client();
+        $anaf = new Anaf();
         $anaf->addCif([
             "RO16826034",
             "RO14399840"
@@ -30,7 +30,7 @@ class FlowTest extends TestCase
 
     public function testOneCUI()
     {
-        $anaf = new Client();
+        $anaf = new Anaf();
         $anaf->addCif("RO14399840");
         $results = $anaf->first();
 
@@ -39,7 +39,7 @@ class FlowTest extends TestCase
 
     public function testAddressParser()
     {
-        $anaf = new Client();
+        $anaf = new Anaf();
         $anaf->addCif("RO14399840");
         $results = $anaf->first();
 

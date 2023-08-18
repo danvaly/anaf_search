@@ -1,6 +1,6 @@
 <?php
 
-namespace Itrack\Anaf;
+namespace Danvaly\AnafSearch;
 
 use PHPUnit\Framework\TestCase;
 
